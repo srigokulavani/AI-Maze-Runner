@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Maze Runner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #222;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    #gameContainer {
+      display: inline-block;
+      margin-top: 20px;
+      border: 3px solid #555;
+      background-color: #111;
+    }
+    #mazeCanvas {
+      background-color: black;
+      display: block;
+      margin: 0 auto;
+      cursor: crosshair;
+    }
+    #uiControls {
+      margin-top: 15px;
+    }
+    #uiControls button {
+      margin: 0 5px;
+      font-size: 16px;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+    }
+    #info {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Maze Runner</h1>
+  <div id="gameContainer">
+    <canvas id="mazeCanvas" width="600" height="600"></canvas>
+  </div>
+  <div id="uiControls">
+    <button onclick="setModeNormal()">Normal Mode</button>
+    <button onclick="setModeAI()">Play with AI Opponent</button>
+    <button onclick="pauseGame()">Pause / Resume (P)</button>
+    <button onclick="restartGame()">Restart (R)</button>
+  </div>
+  <div id="info"></div>
+
+  <script src="maze.js"></script>
+</body>
+</html>
